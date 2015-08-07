@@ -190,6 +190,7 @@ ___________________________________________________
         <MediaCodec name="OMX.qcom.audio.decoder.amrwbplus" type="audio/amr-wb-plus" >
         </MediaCodec>
         <!-- Audio Software  -->
+<<<<<<< HEAD
         <!--[BUGFIX]-Del-BEGIN by TSCD.youcai.chen,01/28/2015,PR-913421-->
         <!--[CTS] android.media.cts.MediaCodecListTest failed-->
         <!--
@@ -202,6 +203,9 @@ ___________________________________________________
         <MediaCodec name="OMX.google.raw.decoder" type="audio/flac" />
         -->
         <!--[BUGFIX]-Del-END by TSCD.youcai.chen-->
+=======
+        <MediaCodec name="OMX.qti.audio.decoder.flac" type="audio/flac" />
+>>>>>>> 7cfe69a... idol3: add flac decoder in media_codecs.xml
         <MediaCodec name="OMX.qcom.audio.decoder.Qcelp13" type="audio/qcelp" >
             <Quirk name="requires-global-flush" />
         </MediaCodec>
