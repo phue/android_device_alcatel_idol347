@@ -1,0 +1,20 @@
+# Audio
+ro.qc.sdk.audio.fluencetype=fluence
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
+# set roaming indicator to always show
+ro.config.always_show_roaming=true
+
+# Display
+ro.sf.lcd_density=320
+
+# Radio
+persist.data.target=dpm1
+persist.radio.multisim.config=dsds
+persist.radio.no_cons_man_roam=1
+ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999
+
+ro.com.android.mobiledata=false
+ro.telephony.default_network=9,1
