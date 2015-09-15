@@ -184,6 +184,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     power.msm8916
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_cm
+	
 # RIL
 PRODUCT_PACKAGES += \
     libxml2
