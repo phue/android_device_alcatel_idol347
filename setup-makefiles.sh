@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=lettuce
-VENDOR=yu
+DEVICE=idol347
+VENDOR=alcatel
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
