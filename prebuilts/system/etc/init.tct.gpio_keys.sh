@@ -1,4 +1,5 @@
-# Copyright (c) 2014, The Linux Foundation. All rights reserved.
+#!/system/bin/sh
+# Copyright (c) 2012, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -23,5 +24,29 @@
 # BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+para="$1"
 
-key 116   POWER         WAKE_DROPPED
+persoconfig=`getprop persist.sys.switchFlip.on`
+case "$persoconfig" in
+    "0" | "")
+       para="0"
+    ;;
+esac
+
+cd /sys/devices
+
+for socdir in soc*; do
+    cd /sys/devices/$socdir
+
+    for attrfile in gpio_keys*; do
+        if [ -f /sys/devices/$socdir/$attrfile/init_ok ]; then
+            echo $para > /sys/devices/$socdir/$attrfile/init_ok
+            exit 0
+        fi
+    done
+
+    cd /sys/devices
+done

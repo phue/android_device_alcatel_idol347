@@ -1,4 +1,5 @@
-# Copyright (c) 2014, The Linux Foundation. All rights reserved.
+#!/system/bin/sh
+# Copyright (c) 2012, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,9 +25,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
 
-key 115   VOLUME_UP
-key 114   VOLUME_DOWN
-key 102   HOME
-key 528   FOCUS
-key 766   CAMERA
+PATH=/system/bin:$PATH
+export PATH
+cat /sys/devices/platform/rs300000a7.65536/force_sync
+cat /sys/devices/platform/rs300100a7.65536/force_sync
