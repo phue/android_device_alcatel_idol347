@@ -13,10 +13,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product-if-exists, vendor/yu/lettuce/lettuce-vendor.mk)
+#$(call inherit-product-if-exists, vendor/alcatel/idol347/idol347-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Ramdisk
+ PRODUCT_COPY_FILES += \
+     $(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
+
+# Prebuilt
+PRODUCT_COPY_FILES += \
+     $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilts/system,system)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -64,20 +72,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
-# Audio configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/acdb/Bluetooth_cal.acdb:system/etc/acdbdata/QRD/Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/General_cal.acdb:system/etc/acdbdata/QRD/General_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/Global_cal.acdb:system/etc/acdbdata/QRD/Global_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/Handset_cal.acdb:system/etc/acdbdata/QRD/Handset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/Hdmi_cal.acdb:system/etc/acdbdata/QRD/Hdmi_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/Headset_cal.acdb:system/etc/acdbdata/QRD/Headset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdb/Speaker_cal.acdb:system/etc/acdbdata/QRD/Speaker_cal.acdb \
-    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-	$(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -106,15 +100,6 @@ PRODUCT_PACKAGES += \
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
-
-ifeq ($(BOARD_USES_QCNE),true)
-PRODUCT_PACKAGES += \
-    services-ext \
-    init.cne.rc
-
-PRODUCT_PROPERTY_OVERRIDES +=
-    persist.cne.feature=4
-endif
 
 # CRDA
 PRODUCT_PACKAGES += \
@@ -158,14 +143,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=row
 
-# IRSC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
-
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -177,11 +157,9 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
     libdashplayer \
@@ -206,26 +184,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     power.msm8916
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.crda.sh \
-    init.qcom.bt.sh \
-    init.qcom.coex.sh \
-    fstab.qcom \
-    init.lettuce.diag.rc \
-    init.target.rc
-
-PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    init.qcom.power.rc \
-    init.qcom.usb.rc \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_cm
-
 # RIL
 PRODUCT_PACKAGES += \
     libxml2
@@ -237,10 +195,6 @@ PRODUCT_PACKAGES += \
     libcalmodule_common \
     sensors.msm8916
 
-# Thermals
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal-engine.conf
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -251,18 +205,11 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
-    dhcpcd.conf \
     wpa_supplicant \
-    wpa_supplicant.conf \
     libwcnss_qmi \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny \
-    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
 	$(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin

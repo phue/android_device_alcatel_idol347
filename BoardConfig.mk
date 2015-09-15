@@ -51,10 +51,10 @@ TARGET_CPU_VARIANT := cortex-a53
 endif
 
 # Properties (reset them here, include more in device if needed)
-TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.bootloader=L1AB2020BQ00 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
@@ -175,7 +175,7 @@ TARGET_HAVE_SIGNED_VENUS_FW := true
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    $(VENDOR_PATH)/sepolicy
+    $(DEVICE_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     bluetooth_loader.te \
@@ -215,4 +215,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/alcatel/idol347/BoardConfigVendor.mk
+#-include vendor/alcatel/idol347/BoardConfigVendor.mk
