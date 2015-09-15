@@ -162,7 +162,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/prebuilts/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/ramdisk/fstab.qcom
 
 # RIL
 TARGET_RIL_VARIANT := caf
