@@ -15,8 +15,6 @@
 
 DEVICE_PATH := device/alcatel/idol347
 
-FORCE_32_BIT := true
-
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Platform
@@ -28,29 +26,12 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
 # Architecture
-ifneq ($(FORCE_32_BIT),true)
-TARGET_BOARD_SUFFIX := _64
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
-
-TARGET_USES_64_BIT_BINDER := true
-else
 TARGET_BOARD_SUFFIX := _32
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-endif
 
 # Properties (reset them here, include more in device if needed)
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
@@ -63,13 +44,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 00000100
 BOARD_RAMDISK_OFFSET     := 01000000
-ifneq ($(FORCE_32_BIT),true)
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
 
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-TARGET_USES_UNCOMPRESSED_KERNEL := true
-endif
 TARGET_KERNEL_SOURCE := kernel/alcatel/msm8916
 TARGET_KERNEL_CONFIG := cyanogenmod_idol347_defconfig
 
