@@ -156,8 +156,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),lettuce)
-ifeq (\$(QCPATH),)
+ifeq (\$(TARGET_DEVICE),idol347)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
@@ -287,7 +286,6 @@ include \$(BUILD_PREBUILT)
 \$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 \$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib64/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 
-endif
 endif
 
 EOF

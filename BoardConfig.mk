@@ -72,7 +72,7 @@ TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # CMHW
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
+BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 
 # CPU
@@ -192,4 +192,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-#-include vendor/alcatel/idol347/BoardConfigVendor.mk
+-include vendor/alcatel/idol347/BoardConfigVendor.mk
