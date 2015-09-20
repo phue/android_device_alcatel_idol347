@@ -1,0 +1,2 @@
+add_lunch_combo cm_idol347-userdebug
+add_lunch_combo cm_idol347-eng
