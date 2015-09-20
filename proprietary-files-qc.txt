@@ -63,12 +63,12 @@ vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegenc.so
 
 # Camera autofocus
-vendor/lib/libactuator_idol347.so
-vendor/lib/libactuator_idol347_camcorder.so
-vendor/lib/libactuator_idol347_camera.so
-vendor/lib/libactuator_idol347.so
-vendor/lib/libactuator_idol347_camcorder.so
-vendor/lib/libactuator_idol347_camera.so
+vendor/lib/libactuator_ak7348_idol347.so
+vendor/lib/libactuator_ak7348_idol347_camcorder.so
+vendor/lib/libactuator_ak7348_idol347_camera.so
+vendor/lib/libactuator_ak7348_idol347.so
+vendor/lib/libactuator_ak7348_idol347_camcorder.so
+vendor/lib/libactuator_ak7348_idol347_camera.so
 
 # Camera chromatix
 vendor/lib/libchromatix_s5k3m2_idol347_default_video.so
