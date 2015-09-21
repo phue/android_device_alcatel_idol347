@@ -358,7 +358,6 @@ etc/permissions/com.qualcomm.location.xml
 -lib/libloc_api_v02.so
 -lib/libloc_ds_api.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
-vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -529,7 +528,6 @@ vendor/lib/mmi_touchpanel.so
 vendor/lib/mmi_vibrator.so
 vendor/lib/mmi_volume.so
 
-lib/hw/sensors.msm8916.so
 vendor/etc/calmodule.cfg
 vendor/lib/libcalmodule_akm.so
 
@@ -570,3 +568,22 @@ vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 
 bin/ssr_setup
 bin/ssr_diag
+
+# Use all hw blobs from stock
+lib/hw/camera.msm8916.so
+lib/hw/copybit.msm8916.so
+lib/hw/gps.default.so
+lib/hw/gralloc.default.so
+lib/hw/gralloc.msm8916.so
+lib/hw/hwcomposer.msm8916.so
+lib/hw/keystore.default.so
+lib/hw/keystore.qcom.so
+lib/hw/lights.msm8916.so
+lib/hw/local_time.default.so
+lib/hw/memtrack.msm8916.so
+lib/hw/nfc_nci.bcm2079x.default.so
+lib/hw/power.default.so
+lib/hw/power.qcom.so
+lib/hw/sensors.msm8916.so
+lib/hw/vibrator.default.so
+lib/hw/wbc_hal.default.so
