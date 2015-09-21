@@ -41,12 +41,12 @@ function extract() {
             adb pull /system/$FILE $BASE/$DEST
         fi
       else
-        if [ -z $SRC/system/$DEST ]; then
-            echo ":: $DEST"
-            cp $SRC/system/$DEST $BASE/$DEST
+        if [ -z $SRC$DEST ]; then
+            echo "Copying $SRC$DST -> $DEST"
+            cp $SRC$DEST $BASE/$DEST
         else
-            echo ":: $FILE"
-            cp $SRC/system/$FILE $BASE/$DEST
+            echo "Copying $SRC$FILE $FILE"
+            cp $SRC$FILE $BASE/$DEST
         fi
       fi
     done
