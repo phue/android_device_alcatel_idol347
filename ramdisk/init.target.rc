@@ -468,11 +468,11 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
 #    user root
 #    group root
 
-service tclapp_ss /system/bin/tclapp_switch_service
-    class late_start
-    user root
-    group root
-    seclabel u:r:tclapp_switch_service:s0
+#service tclapp_ss /system/bin/tclapp_switch_service
+#    class late_start
+#    user root
+#    group root
+#    seclabel u:r:tclapp_switch_service:s0
 
 
 #[FEATURE]-Add-BEGIN by TCTNB.93391,10/17/2014,719974,autoinstall

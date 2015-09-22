@@ -587,10 +587,14 @@ lib/hw/sensors.msm8916.so
 lib/hw/vibrator.default.so
 lib/hw/wbc_hal.default.so
 # Add more 
-vendor/lib/libNimsWrap.so
+#vendor/lib/libNimsWrap.so
 
 # These frameworks are misiing after build 
 # copy them from the device
-framework/WfdCommon.jar
-framework/tcmiface.jar
-framework/org.codeaurora.Performance.jar
+#framework/WfdCommon.jar
+#framework/tcmiface.jar
+#framework/org.codeaurora.Performance.jar
+#framework/tct.glue.jar
+#framework/frameworks_ext.jar
+#framework/tct.framework.jar
+
