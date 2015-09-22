@@ -42,10 +42,10 @@ function extract() {
         fi
       else
         if [ -z $SRC$DEST ]; then
-            echo "Copying $SRC$DST -> $DEST"
+            echo "Copying $SRC$DST -> $BASE$DEST"
             cp $SRC$DEST $BASE/$DEST
         else
-            echo "Copying $SRC$FILE $FILE"
+            echo "Copying $SRC$FILE -> $BASE$FILE"
             cp $SRC$FILE $BASE/$DEST
         fi
       fi
