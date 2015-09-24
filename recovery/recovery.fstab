@@ -1,16 +1,11 @@
 # mount point	fstype    device    	[device2]
-
-#/boot       mtd         boot
-/boot       emmc        /dev/block/mmcblk0p23
-/cache      ext4	/dev/block/mmcblk0p31
-/data       ext4 	/dev/block/mmcblk0p37
-/misc       emmc 	/dev/block/mmcblk0p32
-/recovery   emmc	/dev/block/mmcblk0p24
-# Internal sd card is not mounted properly with this ... 
-#/sdcard     ext4       /dev/block/mmcblk0p37        /dev/block/mmcblk0
-# The SD card is now mounted prpoperly with the following flag
-/sdcard     ext4        			flags=display="Internal SD";symlink
-/system     ext4 	/dev/block/mmcblk0p25
-/system_image	emmc 	/dev/block/mmcblk0p25
-/external_sd     vfat        /dev/block/mmcblk1p1		flags=display="External SD"
-/usb-otg           vfat         /dev/block/sda1        /dev/block/sda   flags=display="USB-OTG";storage;wipeingui;removable
+# CM needs 5 elemnts here (fstab version 2) ... 
+# 
+#<device>	<mountpoint>	<fstype>	<options>	<fs_mgr_flags>
+/dev/block/mmcblk0p23	/boot	emmc	defaults	recoveryonly
+/dev/block/mmcblk0p31	/cache	ext4	rw,noatime,nosuid,nodev,barrier=1,noauto_da_alloc,data-ordered	wait,check
+/dev/block/mmcblk0p37	/data	ext4	rw,noatime,nosuid,nodev,barrier=1,noauto_da_alloc	wait,check,formattable,encryptable=footer,length=-16384
+/dev/block/mmcblk0p32	/misc	emmc	defaults	defaults 
+/dev/block/mmcblk0p24	/recovery	emmc	defaults	recoveryonly
+/dev/block/mmcblk0p25	/system	ext4	ro,barrier=1	wait,check	
+/dev/block/mmcblk1p1	/external_sd vfat	nosuid,nodev 	wait,voldmanaged=sdcard1:auto,noemulatedsd
