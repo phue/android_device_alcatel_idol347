@@ -19,8 +19,22 @@ $(call inherit-product-if-exists, vendor/alcatel/idol347/idol347-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
- PRODUCT_COPY_FILES += \
-     $(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
+# PRODUCT_COPY_FILES += \
+#     $(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+		    init.crda.sh \
+		    init.qcom.bt.sh \
+		    init.qcom.coex.sh
+
+PRODUCT_PACKAGES += \
+		    init.qcom.rc \
+		    init.qcom.power.rc \
+		    init.qcom.usb.rc \
+		    init.recovery.qcom.rc \
+		    ueventd.qcom.rc \
+		    fstab.qcom
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
@@ -85,7 +99,7 @@ PRODUCT_PACKAGES += \
 
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
-				 persist.sys.usb.config=mtp,adb \
+				 persist.sys.usb.config=mtp \
 				 ro.adb.secure=0 \
 				 ro.debuggable=1 
 
