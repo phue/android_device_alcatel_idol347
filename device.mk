@@ -155,7 +155,11 @@ PRODUCT_COPY_FILES += \
 # Thermal
 	PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
-    
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
