@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8916
+
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
 				 persist.sys.usb.config=mtp \
