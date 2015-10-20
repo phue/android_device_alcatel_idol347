@@ -2,7 +2,7 @@
 
 #set -e
 export DEVICE=idol347
-export VENDOR=alcatel
+export VENDOR=tcl
 
 if [ $# -eq 0 ]; then
   SRC=adb
@@ -42,11 +42,14 @@ function extract() {
         fi
       else
         if [ -z $SRC$DEST ]; then
-            echo "Copying $SRC$DST -> $BASE$DEST"
+            echo "Copying $SRC$DEST -> $DEST"
             cp $SRC$DEST $BASE/$DEST
         else
-            echo "Copying $SRC$FILE -> $BASE$FILE"
+	    if [ ! -e $SRC$FILE ]; then
+		    printf "\\e[1;31m%s\\e[0m\n" "File $SRC$FILE does not exist!"
+	    else
             cp $SRC$FILE $BASE/$DEST
+    fi
         fi
       fi
     done

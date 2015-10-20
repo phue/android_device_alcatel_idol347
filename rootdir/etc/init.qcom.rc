@@ -64,6 +64,7 @@ on init
 
 on fs
     mount_all fstab.qcom
+    write /sys/kernel/boot_adsp/boot 1 
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
     setprop ro.crypto.fuse_sdcard true
@@ -189,7 +190,7 @@ on early-boot
     write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
     write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
-    write /sys/kernel/boot_adsp/boot 1
+#    write /sys/kernel/boot_adsp/boot 1
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
