@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEVICE=idol347
-VENDOR=tcl
+VENDOR=alcatel
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -157,94 +157,93 @@ EOF
 LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(TARGET_DEVICE),idol347)
-ifeq (\$(QCPATH),)
 
-####include \$(CLEAR_VARS)
-#LOCAL_MODULE := com.qualcomm.location
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_PRIVILEGED_MODULE := true
-#LOCAL_CERTIFICATE := platform
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := com.qualcomm.location
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_CERTIFICATE := platform
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := qcrilmsgtunnel
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_CERTIFICATE := platform
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := qcrilmsgtunnel
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := shutdownlistener
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/app/shutdownlistener/shutdownlistener.apk
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_CERTIFICATE := platform
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := shutdownlistener
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/app/shutdownlistener/shutdownlistener.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := TimeService
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/app/TimeService/TimeService.apk
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_CERTIFICATE := platform
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := TimeService
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/app/TimeService/TimeService.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := qcnvitems
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/framework/qcnvitems.jar
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-#LOCAL_CERTIFICATE := PRESIGNED
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := qcnvitems
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/framework/qcnvitems.jar
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_CERTIFICATE := PRESIGNED
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := qcrilhook
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-#LOCAL_CERTIFICATE := PRESIGNED
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := qcrilhook
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_CERTIFICATE := PRESIGNED
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := libloc_api_v02
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES_64 := proprietary/lib64/libloc_api_v02.so
-#LOCAL_SRC_FILES_32 := proprietary/lib/libloc_api_v02.so
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := .so
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_SHARED_LIBRARIES)
-#LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_SHARED_LIBRARIES)
-#LOCAL_MULTILIB := both
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libloc_api_v02
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES_64 := proprietary/lib64/libloc_api_v02.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libloc_api_v02.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := libloc_ds_api
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES_64 := proprietary/lib64/libloc_ds_api.so
-#LOCAL_SRC_FILES_32 := proprietary/lib/libloc_ds_api.so
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := .so
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_SHARED_LIBRARIES)
-#LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_SHARED_LIBRARIES)
-#LOCAL_MULTILIB := both
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libloc_ds_api
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES_64 := proprietary/lib64/libloc_ds_api.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libloc_ds_api.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
@@ -260,67 +259,33 @@ LOCAL_MULTILIB := both
 LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS) 
-LOCAL_MODULE := WfdCommon
-LOCAL_MODULE_OWNER := tcl
-LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libqct_resampler
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqct_resampler.so
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := 32
 LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := tcmiface
-LOCAL_MODULE_OWNER := tcl
-LOCAL_SRC_FILES := proprietary/framework/tcmiface.jar
+LOCAL_MODULE := libmm-abl
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/vendor/lib64/libmm-abl.so
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := 64
 LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := qcmediaplayer
-LOCAL_MODULE_OWNER := tcl
-LOCAL_SRC_FILES := proprietary/framework/qcmediaplayer.jar
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
-LOCAL_PROPRIETARY_MODULE := true
-include \$(BUILD_PREBUILT)
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib64/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := libqct_resampler
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/vendor/lib/libqct_resampler.so
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := .so
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
-#LOCAL_MULTILIB := 32
-#LOCAL_PROPRIETARY_MODULE := true
-#include \$(BUILD_PREBUILT)
-
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := libmm-abl
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/vendor/lib64/libmm-abl.so
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := .so
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
-#LOCAL_MULTILIB := 64
-#LOCAL_PROPRIETARY_MODULE := true
-#include \$(BUILD_PREBUILT)
-
-#\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
-#\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib64/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
-
-endif
 endif
 
 EOF

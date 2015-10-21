@@ -16,13 +16,13 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from idol347
-$(call inherit-product, device/tcl/idol347/device.mk)
+# Inherit from lettuce device
+$(call inherit-product, device/alcatel/idol347/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := idol347
 PRODUCT_NAME := full_idol347
-PRODUCT_BRAND := TCL
+PRODUCT_BRAND := Alcatel
 PRODUCT_MODEL := idol347
-PRODUCT_MANUFACTURER := TCL
-$(call inherit-product-if-exists, vendor/tcl/idol347/idol347-vendor.mk)
+PRODUCT_MANUFACTURER := Alcatel
+$(call inherit-product-if-exists, vendor/alcatel/idol347/idol347-vendor.mk)
