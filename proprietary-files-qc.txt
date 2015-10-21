@@ -764,16 +764,16 @@ vendor/lib/libxt_native.so
 vendor/lib/mmi_wifi.so
 vendor/media/LMspeed_508.emd
 vendor/media/PFFprec_600.emd
-vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/landmark_group_meta_data.bin
-vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin
-vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin
-vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-3-tree7-wmd.bin
-vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-r0-ri30.4a-v24-tree7-2-wmd.bin
-vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-rn30-ri30.5-v24-tree7-2-wmd.bin
-vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-rp30-ri30.5-v24-tree7-2-wmd.bin
-vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/pose-r.8.1.bin
-vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/pose-y-r.8.1.bin
-vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin
+#vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/landmark_group_meta_data.bin
+#vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin
+#vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin
+#vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-3-tree7-wmd.bin
+#vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-r0-ri30.4a-v24-tree7-2-wmd.bin
+#vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-rn30-ri30.5-v24-tree7-2-wmd.bin
+#vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-rp30-ri30.5-v24-tree7-2-wmd.bin
+#vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/pose-r.8.1.bin
+#vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/pose-y-r.8.1.bin
+#vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin
 
 # The lines below are added at the same time as the previous 
 # comment. The intntention is to boot with the stock ramdisk.
@@ -1006,7 +1006,7 @@ lib/libcryptfs_hw.so
 lib/libDxHdcp.so
 lib/libfaac.so
 lib/libFastFocus.so
-lib/libfilterpack_facedetect.so
+#lib/libfilterpack_facedetect.so
 lib/libfn.fastfocus.so
 lib/libfota_d_native.so
 lib/libgps.utils.so
