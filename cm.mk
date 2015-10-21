@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/tcl/idol347/full_idol347.mk)
+$(call inherit-product, device/alcatel/idol347/full_idol347.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 PRODUCT_NAME := cm_idol347
-BOARD_VENDOR := tcl
+BOARD_VENDOR := alcatel
 PRODUCT_DEVICE := idol347
 
 TARGET_VENDOR_PRODUCT_NAME := idol347
