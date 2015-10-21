@@ -13,7 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/tcl/idol347
+USE_HOST_LEX=yes
+DEVICE_PATH := device/alcatel/idol347
+
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -39,13 +41,13 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 80000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.bootloader=L1AB2020BQ00
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive androidboot.bootloader=L1AJE0E0BQ00 109f10eed3f021e3'
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 00000100
 BOARD_RAMDISK_OFFSET     := 01000000
 
-TARGET_KERNEL_SOURCE := kernel/tcl/idol347
+TARGET_KERNEL_SOURCE := kernel/alcatel/msm8916
 TARGET_KERNEL_CONFIG := cyanogenmod_idol347_defconfig
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -129,7 +131,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 262144000
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 32768000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 32768000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1887438000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 7632896000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12767573000
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
@@ -186,6 +188,7 @@ BOARD_WLAN_DEVICE := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 TARGET_USES_QCOM_WCNSS_QMI := true
+TARGET_PROVIDES_WCNSS_QMI := true
 TARGET_USES_WCNSS_CTRL := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
