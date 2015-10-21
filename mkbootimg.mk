@@ -1,12 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ## Build and run dtbtool
-ifneq ($(wildcard $(HOST_OUT_EXECUTABLES)/dtbToolCM),)
 DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolCM$(HOST_EXECUTABLE_SUFFIX)
-else 
-DTBTOOL := tools/external/mkbootimg/dtbToolCM$(HOST_EXECUTABLE_SUFFIX)
-endif
-
 INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
 ifneq ($(TARGET_KERNEL_ARCH),)
