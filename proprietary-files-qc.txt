@@ -1049,7 +1049,6 @@ lib/libtfa9897.so
 lib/libTlcAccount.so
 lib/libtorch.so
 lib/libwbc_jni.so
-lib/libwfdlinkstub.so
 lib/libwifi-hal-qcom.so
 lib/libwnndict.so
 lib/libWnnEngDic.so

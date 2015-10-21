@@ -2,7 +2,7 @@
 
 #set -e
 export DEVICE=idol347
-export VENDOR=tcl
+export VENDOR=alcatel
 
 if [ $# -eq 0 ]; then
   SRC=adb

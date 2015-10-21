@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEVICE=idol347
-VENDOR=tcl
+VENDOR=alcatel
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
