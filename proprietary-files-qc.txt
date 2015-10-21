@@ -348,7 +348,7 @@ vendor/lib/libssd.so
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
-vendor/lib/drm/libdrmwvmplugin.so
+#vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
@@ -989,8 +989,8 @@ framework/tct.glue.jar
 framework/vcard.jar
 framework/WfdCommon.jar
 framework/qcmediaplayer.jar
-lib/drm/libcombinedengine.so
-lib/drm/libseparateengine.so
+#lib/drm/libcombinedengine.so
+#lib/drm/libseparateengine.so
 lib/egl/egl.cfg
 lib/libA9FlowEngine.so
 lib/libAAX_SDK.so
@@ -1054,8 +1054,6 @@ lib/libwifi-hal-qcom.so
 lib/libwnndict.so
 lib/libWnnEngDic.so
 lib/libWnnJpnDic.so
-lib/modules/modules.dep.bb
-lib/modules/pronto/pronto_wlan.ko
 lib/soundfx/libarkamys.so
 system.ver
 xbin/BrcmNfcHwTest
