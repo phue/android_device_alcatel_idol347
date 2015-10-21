@@ -186,7 +186,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += libOmxVdecHevc
 
 PRODUCT_BOOT_JARS += \
-    #qcmediaplayer
+    qcmediaplayer
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -223,10 +223,9 @@ PRODUCT_PACKAGES += \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+	$(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # WiFi Display
-PRODUCT_BOOT_JARS += WfdCommon \
-		     qcmediaplayer
+PRODUCT_BOOT_JARS += WfdCommon
