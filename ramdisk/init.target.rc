@@ -372,7 +372,7 @@ service kernel_report /system/bin/reporthelper -k
     user root
     group system
     disabled
-    seclabel u:r:reporthelper:s0
+#    seclabel u:r:reporthelper:s0
 
 on property:persist.sys.kmsg.enable=1
     start kernel_report
@@ -384,7 +384,7 @@ service adb_report /system/bin/reporthelper -a
     user root
     group system
     disabled
-    seclabel u:r:reporthelper:s0
+#    seclabel u:r:reporthelper:s0
 
 on property:persist.sys.adb.enable=1
     start adb_report
@@ -397,19 +397,19 @@ on property:persist.sys.tombstone.enable=*
 service tct_diag_mdlog /system/bin/diag_mdlog -t -o /sdcard/TCTReport/diag_logs/ -c
     disabled
     oneshot
-    seclabel u:r:diag:s0
+#    seclabel u:r:diag:s0
 
 service tct_kill_dm /system/bin/diag_mdlog -k
     disabled
     oneshot
-    seclabel u:r:diag:s0
+#    seclabel u:r:diag:s0
 
 service log_cpy /system/bin/reporthelper -c
     user root
     group system
     oneshot
     disabled
-    seclabel u:r:reporthelper:s0
+#    seclabel u:r:reporthelper:s0
 #[FEATURE]-Added-END by Miao
 
 #[FEATURE]-Add-BEGIN by TCTNB.xlj,11/10/2014,PR-786365,add nv restore after fota
@@ -417,7 +417,7 @@ service nvdiag_daemon /system/bin/nvdiag_daemon
     class late_start
     user root
     group root
-    seclabel u:r:nvdiag_daemon:s0
+#    seclabel u:r:nvdiag_daemon:s0
 
 service restore_efs /system/bin/restore_efs
     class late_start
@@ -430,7 +430,7 @@ service powerup_reason /system/bin/powerup_reason
     user root
     group root
     oneshot
-    seclabel u:r:powerup_reason:s0
+#    seclabel u:r:powerup_reason:s0
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
