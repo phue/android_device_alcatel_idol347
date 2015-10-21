@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product-if-exists, vendor/alcatel/idol347/idol347-vendor.mk)
+$(call inherit-product-if-exists, vendor/tcl/idol347/idol347-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -34,7 +34,8 @@ PRODUCT_PACKAGES += \
 		    init.qcom.usb.rc \
 		    init.recovery.qcom.rc \
 		    ueventd.qcom.rc \
-		    fstab.qcom
+		    fstab.qcom \
+		    init.target.rc
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
@@ -185,7 +186,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += libOmxVdecHevc
 
 PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    #qcmediaplayer
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -226,4 +227,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # WiFi Display
-PRODUCT_BOOT_JARS += WfdCommon
+PRODUCT_BOOT_JARS += WfdCommon \
+		     qcmediaplayer
