@@ -156,10 +156,6 @@ PRODUCT_COPY_FILES += \
 	PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
     
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
-
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
