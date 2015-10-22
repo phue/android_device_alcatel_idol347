@@ -262,7 +262,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS) 
 LOCAL_MODULE := WfdCommon
-LOCAL_MODULE_OWNER := tcl
+LOCAL_MODULE_OWNER := alcatel
 LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
@@ -273,7 +273,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := tcmiface
-LOCAL_MODULE_OWNER := tcl
+LOCAL_MODULE_OWNER := alcatel
 LOCAL_SRC_FILES := proprietary/framework/tcmiface.jar
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
@@ -284,7 +284,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := qcmediaplayer
-LOCAL_MODULE_OWNER := tcl
+LOCAL_MODULE_OWNER := alcatel
 LOCAL_SRC_FILES := proprietary/framework/qcmediaplayer.jar
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar

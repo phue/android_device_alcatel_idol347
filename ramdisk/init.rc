@@ -719,7 +719,7 @@ service root_check /sbin/root_checker --monitor
 service tctd /system/bin/tctd
     class core
     socket tctd stream 0666 root root
-    seclabel u:r:tctd:s0
+#    seclabel u:r:tctd:s0
 
 #FR-736500, Crash DUMP Flag Management
 on property:persist.sys.dload.enable=*
