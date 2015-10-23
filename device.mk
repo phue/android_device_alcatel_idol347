@@ -217,6 +217,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxml2
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    NfcNci \
+    nfc_nci.bcm2079x.default \
+    Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+
 # Sensors
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/sensors/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
