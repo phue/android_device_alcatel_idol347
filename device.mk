@@ -90,9 +90,12 @@ PRODUCT_PACKAGES += \
     
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+	$(LOCAL_PATH)/audio/audio.primary.msm8916.so:system/lib/hw/audio.primary.msm8916.so \
+    $(LOCAL_PATH)/audio/audio_effects_vendor.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml
+    $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -103,6 +106,9 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/camera/camera.vendor.msm8916.so:system/lib/hw/camera.vendor.msm8916.so
 
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -136,7 +142,11 @@ PRODUCT_PACKAGES += \
     FMRecord \
     libqcomfm_jni \
     qcom.fmradio
-	
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
@@ -163,7 +173,11 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
-	
+    
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8916
+
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -205,6 +219,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/sensors/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
     $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
 
 # Stlport
