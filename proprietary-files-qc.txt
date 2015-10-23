@@ -781,12 +781,7 @@ etc/firmware/ice40.bin
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/nfc_test.bin
-etc/libnfc-brcm-20791b05.conf
-etc/libnfc-brcm-20795a10.conf
-etc/libnfc-brcm-20795a20.conf
-etc/libnfc-brcm.conf
 etc/lowi.conf
-etc/nfcee_access.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/qca6234-service.sh
 etc/qlog-conf.xml
