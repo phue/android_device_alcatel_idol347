@@ -210,15 +210,15 @@ ifeq (\$(QCPATH),)
 #LOCAL_CERTIFICATE := PRESIGNED
 #include \$(BUILD_PREBUILT)
 
-#include \$(CLEAR_VARS)
-#LOCAL_MODULE := qcrilhook
-#LOCAL_MODULE_OWNER := $VENDOR
-#LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
-#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-#LOCAL_CERTIFICATE := PRESIGNED
-#include \$(BUILD_PREBUILT)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := qcrilhook
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_CERTIFICATE := PRESIGNED
+include \$(BUILD_PREBUILT)
 
 #include \$(CLEAR_VARS)
 #LOCAL_MODULE := libloc_api_v02
@@ -248,7 +248,7 @@ ifeq (\$(QCPATH),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
-LOCAL_MODULE_OWNER := yu
+LOCAL_MODULE_OWNER := $VENDOR
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libtime_genoff.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libtime_genoff.so
 LOCAL_MODULE_TAGS := optional
@@ -260,20 +260,20 @@ LOCAL_MULTILIB := both
 LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS) 
-LOCAL_MODULE := WfdCommon
-LOCAL_MODULE_OWNER := alcatel
-LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
-LOCAL_PROPRIETARY_MODULE := true
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS) 
+#LOCAL_MODULE := WfdCommon
+#LOCAL_MODULE_OWNER := $VENDOR
+#LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_SUFFIX := .jar
+#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
+#LOCAL_PROPRIETARY_MODULE := true
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := tcmiface
-LOCAL_MODULE_OWNER := alcatel
+LOCAL_MODULE_OWNER := $VENDOR
 LOCAL_SRC_FILES := proprietary/framework/tcmiface.jar
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
@@ -284,7 +284,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := qcmediaplayer
-LOCAL_MODULE_OWNER := alcatel
+LOCAL_MODULE_OWNER := $VENDOR
 LOCAL_SRC_FILES := proprietary/framework/qcmediaplayer.jar
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
