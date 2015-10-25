@@ -744,10 +744,10 @@ on property:sys.boot_completed=1
     start qcom-post-boot
     start config-zram
 
-service atfwd /system/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
+#service atfwd /system/bin/ATFWD-daemon
+#    class late_start
+#    user system
+#    group system radio
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
