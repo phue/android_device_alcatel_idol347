@@ -364,9 +364,8 @@ vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
+bin/lowi-server
 etc/permissions/com.qualcomm.location.xml
--lib/libloc_api_v02.so
--lib/libloc_ds_api.so
 -lib/libloc_api_v02.so
 -lib/libloc_ds_api.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
@@ -748,7 +747,6 @@ vendor/media/PFFprec_600.emd
 # comment. The intention is to boot with the stock ramdisk.
 
 bin/hdcpService
-bin/lowi-server
 etc/firmware/a225p5_pm4.fw
 etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
