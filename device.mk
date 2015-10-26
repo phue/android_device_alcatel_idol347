@@ -20,25 +20,17 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-		    init.crda.sh \
-		    init.qcom.bt.sh \
-		    init.qcom.coex.sh
-
-PRODUCT_PACKAGES += \
-		    init.qcom.rc \
-		    init.qcom.power.rc \
-		    init.qcom.usb.rc \
-		    init.recovery.qcom.rc \
-		    ueventd.qcom.rc \
-		    fstab.qcom \
-		    init.target.rc
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
-
-# Prebuilt
-#PRODUCT_COPY_FILES += \
-#     $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilts/system,system)
+    fstab.qcom \
+    init.qcom.bt.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qcom.zram.sh \
+    init.recovery.qcom.rc \
+    init.tct.gpio_keys.sh \
+    ueventd.qcom.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
