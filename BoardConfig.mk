@@ -131,7 +131,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12767573000
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_TAP_TO_WAKE_NODE := "/sys/class/tp_gesture/tp_device/tp_gesture_id"
+
+# CMHW
+BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/cmhw
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
