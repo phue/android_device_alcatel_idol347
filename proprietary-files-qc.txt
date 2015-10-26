@@ -38,7 +38,6 @@ lib/libfn.fastfocus.so
 lib/libqomx_core.so
 lib/libmm-omxcore.so
 lib/libmm-qcamera.so
-lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libmmcamera_interface.so
 vendor/lib/libjpegdhw.so
@@ -705,6 +704,7 @@ vendor/lib/libnative_audio_latency_jni.so
 vendor/lib/libOmxMux.so
 vendor/lib/libP11EncryptorDecryptor.so
 vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
 vendor/lib/lib-rcsimssjni.so
 vendor/lib/lib-rcsjni.so
 vendor/lib/lib-rtpcommon.so
