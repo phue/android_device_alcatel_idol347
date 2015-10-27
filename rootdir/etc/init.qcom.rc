@@ -370,7 +370,7 @@ on boot
     # Touchpanel
     chown system system /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
 	chmod 0666 /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
-    chmod 0666 /sys/class/tp_gesture/tp_device/tp_gesture_id
+	chmod 0666 /sys/class/tp_gesture/tp_device/tp_gesture_id
 
     # TFA9897
     chown system audio /dev/i2c-4
