@@ -157,14 +157,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
-    
-# Thermal
-	PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl
+    $(LOCAL_PATH)/keylayout/msg.kl:system/usr/keylayout/msg.kl
+
+# Thermal
+	PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -225,6 +225,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     nfc_nci.bcm2079x.default \
     Tag
+
+# Touch firmware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ft_fw.bin:system/etc/firmware/ft_fw.bin
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

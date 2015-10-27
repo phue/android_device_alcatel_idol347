@@ -72,6 +72,29 @@ on init
     chown root system /sys/class/sensors/kionix-accel/enable
     chown root system /sys/class/sensors/kionix-accel/calibrate
     chown root system /sys/class/sensors/kionix-accel/poll_delay
+    chown root system /sys/class/sensors/tsl27723-als/enable
+    chown root system /sys/class/sensors/tsl27723-als/calibrate
+    chown root system /sys/class/sensors/tsl27723-als/poll_delay
+
+    chown root system /sys/class/sensors/tsl27723-ps/enable
+    chown root system /sys/class/sensors/tsl27723-ps/calibrate
+    chown root system /sys/class/sensors/tsl27723-ps/poll_delay
+
+    chown root system /sys/class/sensors/rpr521-als/enable
+    chown root system /sys/class/sensors/rpr521-als/calibrate
+    chown root system /sys/class/sensors/rpr521-als/poll_delay
+
+    chown root system /sys/class/sensors/rpr521-ps/enable
+    chown root system /sys/class/sensors/rpr521-ps/calibrate
+    chown root system /sys/class/sensors/rpr521-ps/poll_delay
+
+    chown root system /sys/class/sensors/stk3x1x-ls/enable
+    chown root system /sys/class/sensors/stk3x1x-ls/calibrate
+    chown root system /sys/class/sensors/stk3x1x-ls/poll_delay
+
+    chown root system /sys/class/sensors/stk3x1x-proximity/enable
+    chown root system /sys/class/sensors/stk3x1x-proximity/calibrate
+    chown root system /sys/class/sensors/stk3x1x-proximity/poll_delay
 
 on fs
     mount_all fstab.qcom
@@ -345,8 +368,9 @@ on boot
     chmod 0666 /sys/class/leds/led_G/blink
 
     # Touchpanel
+    chown system system /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
+	chmod 0666 /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
     chmod 0666 /sys/class/tp_gesture/tp_device/tp_gesture_id
-    chmod 0666 /sys/class/tp_glove/tp_glove_device/tp_glove_id
 
     # TFA9897
     chown system audio /dev/i2c-4
