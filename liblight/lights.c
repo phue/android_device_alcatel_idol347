@@ -36,9 +36,17 @@
 
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
+static struct light_state_t g_notification;
+static struct light_state_t g_battery;
 
 const char *const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
+        
+const char *const LED_FILE
+        = "/sys/class/leds/led_G/brightness";
+        
+const char *const BLINK_LED_FILE
+        = "/sys/class/leds/led_G/blink";
 
 /**
  * device methods
@@ -80,6 +88,12 @@ write_int(const char *path, int value)
 }
 
 static int
+is_lit(struct light_state_t const* state)
+{
+    return state->color & 0x00ffffff;
+}
+
+static int
 rgb_to_brightness(const struct light_state_t *state)
 {
     int color = state->color & 0x00ffffff;
@@ -102,6 +116,46 @@ set_light_backlight(__attribute__ ((unused)) struct light_device_t *dev,
     pthread_mutex_unlock(&g_lock);
 
     return err;
+}
+
+static int
+set_speaker_light_locked(__attribute__ ((unused)) struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    int brightness_level;
+	int blink_state;
+
+    if (is_lit(state)) {
+		brightness_level = 1;
+		blink_state = 1;
+		write_int(BLINK_LED_FILE, blink_state);
+	} else	{
+		brightness_level = 0;
+		blink_state = 0;
+		write_int(LED_FILE, brightness_level);
+	}
+    return 0;
+}
+
+static void
+handle_speaker_battery_locked(struct light_device_t* dev)
+{
+    if (is_lit(&g_battery)) {
+        set_speaker_light_locked(dev, &g_battery);
+    } else {
+        set_speaker_light_locked(dev, &g_notification);
+    }
+}
+
+static int
+set_light_notifications(struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    pthread_mutex_lock(&g_lock);
+    g_notification = *state;
+    handle_speaker_battery_locked(dev);
+    pthread_mutex_unlock(&g_lock);
+    return 0;
 }
 
 /** Close the lights device */
@@ -129,6 +183,8 @@ static int open_lights(const struct hw_module_t *module, const char *name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
+    else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
+        set_light = set_light_notifications;
     else
         return -EINVAL;
 
@@ -159,7 +215,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "YU Lights Module",
+    .name = "Idol347 Lights Module",
     .author = "The CyanogenMod Project",
     .methods = &lights_module_methods,
 };
