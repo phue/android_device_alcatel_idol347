@@ -238,17 +238,11 @@ on early-boot
     setrlimit 8 67108864 67108864
 
     write /sys/kernel/boot_adsp/boot 1
-    #[BUGFIX]-Add-BEGIN by TCTNB.(Huaidi.Feng), 2015/07/1, for PR1034711 enable other subsystem
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
-    #[BUGFIX]-Add-BEGIN by TCTNB.(Qianbo Pan), 2015/03/24, for PR960472 WCNSS SSR enable
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
-    #[BUGFIX]-Add-END by TCTNB.(Qianbo Pan)
-    #[BUGFIX]-Add-BEGIN by TCTNB.Jiang Dong, 2015/05/21, for PR1007695 Modem SSR enable
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
-    #[BUGFIX]-Add-END by TCTNB.Jiang Dong
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
-    #[BUGFIX]-Add-END by TCTNB.(Huaidi.Feng)
-
+    
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -370,7 +364,6 @@ on boot
     # Touchpanel
     chown system system /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
 	chmod 0666 /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
-	chmod 0666 /sys/class/tp_gesture/tp_device/tp_gesture_id
 
     # TFA9897
     chown system audio /dev/i2c-4
