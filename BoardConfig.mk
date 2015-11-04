@@ -48,7 +48,7 @@ BOARD_KERNEL_TAGS_OFFSET := 00000100
 BOARD_RAMDISK_OFFSET     := 01000000
 
 TARGET_KERNEL_SOURCE := kernel/alcatel/msm8916
-TARGET_KERNEL_CONFIG := cyanogenmod_idol347_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_idol347-perf_defconfig
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
@@ -56,7 +56,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
-#AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
+AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
@@ -152,21 +152,6 @@ TARGET_HAVE_SIGNED_VENUS_FW := true
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    bluetooth_loader.te \
-    bootanim.te \
-    healthd.te \
-    file.te \
-    qseecomd.te \
-    surfaceflinger.te \
-    system_server.te \
-    wcnss_service.te \
-    file_contexts \
-    property_contexts
-	
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 

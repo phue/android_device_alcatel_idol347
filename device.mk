@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/audio.primary.msm8916.so:system/lib/hw/audio.primary.msm8916.so \
     $(LOCAL_PATH)/audio/audio_effects_vendor.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
+#    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
 
@@ -135,10 +135,11 @@ PRODUCT_PACKAGES += \
     qcom.fmradio
 
 # GPS
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/gps.default.so:system/lib/hw/gps.default.so \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
@@ -190,13 +191,12 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxVdecHevc \
     libOmxVdec \
     libOmxVenc \
     libqcmediaplayer \
     libstagefrighthw \
     qcmediaplayer
-
-PRODUCT_PACKAGES += libOmxVdecHevc
 
 PRODUCT_BOOT_JARS += \
     qcmediaplayer
@@ -210,10 +210,6 @@ PRODUCT_COPY_FILES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     power.msm8916
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_cm
 	
 # RIL
 PRODUCT_PACKAGES += \
@@ -226,23 +222,25 @@ PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     Tag
 
-# Touch firmware
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ft_fw.bin:system/etc/firmware/ft_fw.bin
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
-# Sensors
+# Touch firmware
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/sensors/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
-    $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
+    $(LOCAL_PATH)/configs/ft_fw.bin:system/etc/firmware/ft_fw.bin
 
-# Stlport
+# Sensors
 PRODUCT_PACKAGES += \
-    libstlport \
+    calmodule.cfg \
+    libcalmodule_akm.so \
+    libcalmodule_common \
+    sensors.msm8916
+    
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/sensors/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
+#   $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
 
 # USB
 PRODUCT_PACKAGES += \
