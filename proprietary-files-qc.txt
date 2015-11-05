@@ -5,7 +5,7 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 
 # Audio
-system/lib/hw/audio.primary.msm8916.so
+lib/hw/audio.primary.msm8916.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -29,7 +29,7 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
-system/lib/hw/camera.msm8916.so
+lib/hw/camera.msm8916.so
 bin/mm-qcamera-daemon
 lib/libarcsoft_beauty_shot.so
 lib/libarcsoft_flf_engine.so
