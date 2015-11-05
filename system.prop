@@ -60,6 +60,9 @@ persist.fuse_sdcard=true
 
 persist.radio.support_subaddr=0
 
+lpa.decode=false
+lpa.use-stagefright=false
+tunnel.decode=false
 audio.offload.buffer.size.kb=240
 audio.offload.gapless.enabled=true
 audio.offload.min.duration.secs=30
@@ -71,7 +74,6 @@ persist.audio.fluence.voicerec=false
 tunnel.audio.encode = false
 use.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
-
 audio.dolby.ds2.enabled=true
 ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=fluence
