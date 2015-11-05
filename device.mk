@@ -103,9 +103,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8916
 
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/camera/camera.vendor.msm8916.so:system/lib/hw/camera.vendor.msm8916.so
-
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
 				 persist.sys.usb.config=mtp \
@@ -247,10 +244,6 @@ PRODUCT_PACKAGES += \
     libcalmodule_common \
     sensors.msm8916
     
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/sensors/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
-#   $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory

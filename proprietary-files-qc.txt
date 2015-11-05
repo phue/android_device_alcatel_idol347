@@ -29,6 +29,7 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
+system/lib/hw/camera.msm8916.so
 bin/mm-qcamera-daemon
 lib/libarcsoft_beauty_shot.so
 lib/libarcsoft_flf_engine.so
