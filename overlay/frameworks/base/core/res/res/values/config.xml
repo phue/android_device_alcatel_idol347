@@ -53,14 +53,18 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>9</item>
-        <item>30</item>
+        <item>5</item>
+        <item>50</item>
         <item>100</item>
-        <item>325</item>
-        <item>1250</item>
-        <item>3500</item>
-        <item>10000</item>
-        <item>20000</item>
+        <item>150</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>700</item>
+        <item>1000</item>
+        <item>6000</item>
+        <item>45000</item>
+        <item>50000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -69,16 +73,26 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>18</item>
-        <item>30</item>
-        <item>59</item>
-        <item>74</item>
-        <item>92</item>
-        <item>118</item>
-        <item>155</item>
-        <item>222</item>
-        <item>255</item>
+        <item>11</item>
+        <item>16</item>
+        <item>29</item>
+        <item>71</item>
+        <item>87</item>
+        <item>98</item>
+        <item>109</item>
+        <item>131</item>
+        <item>164</item>
+        <item>170</item>
+        <item>191</item>
+        <item>215</item>
+        <item>243</item>
     </integer-array>
+
+    <!-- Enable overlay for all location components. -->
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
+    <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
+    <bool name="config_enableFusedLocationOverlay" translatable="false">false</bool>
+    <string name="config_fusedLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
      on the headphone/microphone jack. When false use the older uevent framework -->
