@@ -1,5 +1,6 @@
 # system.prop for msm8916
 #
+lockscreen.rot_override=true
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
