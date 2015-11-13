@@ -99,6 +99,9 @@ ro.audio.monitorRotation=true
 persist.camera.mct.debug.mask=0
 persist.camera.pproc.debug.mask=0
 
+#Disable qmi logs
+persist.data.qmi.adb_logmask=0
+
 #Trim properties
 ro.sys.fw.use_trim_settings=true
 ro.sys.fw.empty_app_percent=50
