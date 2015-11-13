@@ -3,7 +3,9 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 /dev/block/bootdevice/by-name/system         /system       ext4    ro,barrier=1                                                wait
-/dev/block/bootdevice/by-name/userdata       /data         ext4    nosuid,nodev,barrier=1,noauto_da_alloc               wait,check,encryptable=footer
+/dev/block/bootdevice/by-name/userdata       /data         f2fs    noatime,nosuid,nodev,rw,inline_xattr                        wait,check,formattable,encryptable=footer
+/dev/block/bootdevice/by-name/userdata       /data         ext4    nosuid,nodev,barrier=1,noauto_da_alloc                      wait,check,encryptable=footer
+/dev/block/bootdevice/by-name/cache       	 /cache        f2fs    noatime,nosuid,nodev,rw,inline_xattr              		   wait
 /dev/block/bootdevice/by-name/cache          /cache        ext4    nosuid,nodev,barrier=1                                      wait
 /dev/block/bootdevice/by-name/persist        /persist      ext4    nosuid,nodev,barrier=1                                      wait
 /dev/block/bootdevice/by-name/tctpersist     /tctpersist   ext4    nosuid,nodev,barrier=1                                      wait
@@ -14,5 +16,4 @@ dev/block/bootdevice/by-name/modem           /firmware     vfat    ro,shortname=
 
 /devices/soc.0/7864900.sdhci/mmc_host*       auto          auto    defaults                                                    voldmanaged=sdcard1:auto,noemulatedsd
 /devices/platform/msm_hsusb*                 auto          auto    defaults                                                    voldmanaged=usbdisk:auto
-# Only zram0 is mounted from this file according to the init.target.rc - these above should be save to be commented or removed 
 /dev/block/zram0             none         swap    defaults zramsize=536870912
