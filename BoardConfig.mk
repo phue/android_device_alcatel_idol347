@@ -179,5 +179,16 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# TWRP
+TW_THEME := portrait_hdpi
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_DEVICE_DIRS += device/alcatel/idol347
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_INCLUDE_CRYPTO := true
+TW_NO_USB_STORAGE := true
+TW_NO_SCREEN_TIMEOUT := true
+
 # inherit from the proprietary version
 -include vendor/alcatel/idol347/BoardConfigVendor.mk
