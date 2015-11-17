@@ -76,6 +76,7 @@ vendor/lib/libmmcamera_imx214_idol347.so
 vendor/lib/libmmcamera_ov5670_idol347.so
 vendor/lib/libmmcamera_s5k3m2_idol347.so
 vendor/lib/libmmcamera_s5k3m2_idol347_eeprom.so
+vendor/lib/libmmcamera_s5k3m2_idol347_samsuny.so
 vendor/lib/libmmcamera_s5k5e2_idol347.so
 vendor/lib/libmmcamera_s5k5e2_idol347_eyeverify.so
 vendor/lib/libmmcamera_tintless_algo.so
@@ -154,6 +155,9 @@ vendor/lib/libactuator_dw9714_q13v04b_camera.so
 vendor/lib/libactuator_dw9716.so
 vendor/lib/libactuator_dw9716_camcorder.so
 vendor/lib/libactuator_dw9716_camera.so
+vendor/lib/libactuator_dw9718s.so
+vendor/lib/libactuator_dw9718s_camcorder.so
+vendor/lib/libactuator_dw9718s_camera.so
 vendor/lib/libactuator_iu074.so
 vendor/lib/libactuator_iu074_camcorder.so
 vendor/lib/libactuator_iu074_camera.so
@@ -346,6 +350,15 @@ vendor/lib/libchromatix_s5k3m2_idol347_liveshot.so
 vendor/lib/libchromatix_s5k3m2_idol347_preview.so
 vendor/lib/libchromatix_s5k3m2_idol347_snapshot.so
 vendor/lib/libchromatix_s5k3m2_idol347_video_hd.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_common.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_default_video.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_hfr_120fps.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_hfr_60fps.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_hfr_90fps.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_liveshot.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_preview.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_snapshot.so
+vendor/lib/libchromatix_s5k3m2_idol347_samsuny_video_hd.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_common.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_default_video.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_120fps.so
