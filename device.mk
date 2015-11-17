@@ -217,10 +217,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxml2
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_cm
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -272,6 +268,3 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_BOOT_JARS += \
 	WfdCommon
-
-# TWRP
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
