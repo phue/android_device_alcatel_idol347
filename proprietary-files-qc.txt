@@ -19,6 +19,7 @@ lib/libtfa9897.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
+vendor/lib/libacdbmapper.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libhwdaphal.so
@@ -27,6 +28,11 @@ vendor/lib/libqct_resampler.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+
+vendor/lib/hw/sound_trigger.primary.msm8916.so
+etc/sound_trigger_mixer_paths_wcd9306.xml
+etc/sound_trigger_mixer_paths.xml
+etc/sound_trigger_platform_info.xml
 
 # Bluetooth
 bin/btnvtool
@@ -582,14 +588,11 @@ vendor/lib/mmi_vibrator.so
 vendor/lib/mmi_wifi.so
 vendor/lib/mmi_volume.so
 
-
 lib64/libfota_d_native.so
 lib64/libstlport_shared.so
 vendor/lib/libNimsWrap.so
 vendor/bin/audioflacapp
 vendor/bin/sound_trigger_test
-vendor/lib/hw/sound_trigger.primary.msm8916.so
-vendor/lib/libacdbmapper.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libbccQTI.so
@@ -675,14 +678,6 @@ vendor/lib/libwfduibcsrcinterface.so
 vendor/lib/libwfduibcsrc.so
 vendor/lib/libwifiscanner.so
 vendor/lib/libwqe.so
-
-
-etc/permissions/com.qualcomm.location.vzw_library.xml
-etc/qlog-conf.xml
-etc/region_ver
-etc/sound_trigger_mixer_paths_wcd9306.xml
-etc/sound_trigger_mixer_paths.xml
-etc/sound_trigger_platform_info.xml
 
 #lib/drm/libcombinedengine.so
 #lib/drm/libseparateengine.so
