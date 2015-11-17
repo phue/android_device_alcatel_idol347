@@ -1,3 +1,6 @@
+# NFC
+vendor/firmware/BCM20795A2_001.003.025.0005.0035_Generic_I2C_NCD_Unsigned_configdata.ncd
+
 # Signed Venus (media) firmware
 etc/firmware/venus.b00
 etc/firmware/venus.b01
@@ -6,3 +9,23 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
+
+# Graphics firmware
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
+
+etc/firmware/ice40.bin
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+
+etc/firmware/Signedrompatch_v20.bin
+etc/firmware/Signedrompatch_v21.bin
+etc/firmware/Signedrompatch_v24.bin
+etc/firmware/Signedrompatch_v30.bin

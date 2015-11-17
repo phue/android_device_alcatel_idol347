@@ -1,22 +1,27 @@
 # ADSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
-vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 
 # Audio
+bin/tfa9897
+etc/tfa9897/seltech_bottom.cnt
+etc/tfa9897/seltech_stereo.cnt
+etc/tfa9897/seltech_top.cnt
+etc/tfa9897/LC/seltech_bottom.cnt
+etc/tfa9897/LC/seltech_stereo.cnt
+etc/tfa9897/LC/seltech_top.cnt
+etc/tfa9897/AAC/seltech_bottom.cnt
+etc/tfa9897/AAC/seltech_stereo.cnt
+etc/tfa9897/AAC/seltech_top.cnt
 lib/hw/audio.primary.msm8916.so
+lib/libtfa9897.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
-vendor/lib/libFlacSwDec.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
+vendor/lib/libhwdaphal.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libqct_resampler.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -29,8 +34,8 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
-lib/hw/camera.msm8916.so
 bin/mm-qcamera-daemon
+lib/hw/camera.msm8916.so
 lib/libarcsoft_beauty_shot.so
 lib/libarcsoft_flf_engine.so
 lib/libarcsoft_night_shot.so
@@ -74,6 +79,49 @@ vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libmmcamera_gc0339_alto5.so
+vendor/lib/libmmcamera_hi256.so
+vendor/lib/libmmcamera_imx132.so
+vendor/lib/libmmcamera_imx134.so
+vendor/lib/libmmcamera_imx135.so
+vendor/lib/libmmcamera_imx214.so
+vendor/lib/libmmcamera_mt9m114.so
+vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
+vendor/lib/libmmcamera_ov13850.so
+vendor/lib/libmmcamera_ov16825.so
+vendor/lib/libmmcamera_ov2680_5987fhq.so
+vendor/lib/libmmcamera_ov2680.so
+vendor/lib/libmmcamera_ov2720.so
+vendor/lib/libmmcamera_ov5645.so
+vendor/lib/libmmcamera_ov5648_oty5f03.so
+vendor/lib/libmmcamera_ov5648_p5v18g.so
+vendor/lib/libmmcamera_ov5648_q5v22e.so
+vendor/lib/libmmcamera_ov5670_q5v41b.so
+vendor/lib/libmmcamera_ov5670_truly_ff.so
+vendor/lib/libmmcamera_ov7695.so
+vendor/lib/libmmcamera_ov8825.so
+vendor/lib/libmmcamera_ov8858_q8v19w.so
+vendor/lib/libmmcamera_ov8858.so
+vendor/lib/libmmcamera_ov8865_q8v18a.so
+vendor/lib/libmmcamera_ov9724.so
+vendor/lib/libmmcamera_s5k3l1yx.so
+vendor/lib/libmmcamera_S5K4E1_13P1BA.so
+vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
+vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
+vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
+vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
+vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
+vendor/lib/libmmcamera_sonyimx135_eeprom.so
+vendor/lib/libmmcamera_sony_imx214_eeprom.so
+vendor/lib/libmmcamera_sp1628.so
+vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
+vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
+vendor/lib/libmmcamera_sunny_q13v04b_eeprom.so
+vendor/lib/libmmcamera_sunny_q5v22e_eeprom.so
+vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
+vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
+vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 
 # Camera autofocus
 vendor/lib/libactuator_a3907.so
@@ -352,6 +400,7 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 
 # DRM
 bin/qseecomd
+#vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libdrmdecrypt.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -361,8 +410,13 @@ vendor/lib/libssd.so
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
-#vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+
+vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
+vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so
+vendor/lib/qcdrm/playready/lib/drm/libdrmprplugin_customer.so
+vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
+vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 
 # GPS
 bin/lowi-server
@@ -373,6 +427,7 @@ etc/permissions/com.qualcomm.location.xml
 #lib/libloc_core.so
 #lib/libloc_eng.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
+vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -383,7 +438,9 @@ vendor/lib/libulp2.so
 vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
-vendor/lib/hw/flp.default.so
+#vendor/lib/libloc_ext.so
+#vendor/lib/libloc_xtra.so
+#vendor/lib/libxt_native.so
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so
@@ -393,6 +450,7 @@ vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libc2d30-a4xx.so
+vendor/lib/libc2d30-a3xx.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libgsl.so
@@ -404,9 +462,9 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
-# Graphics firmware
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
+# HDCP
+bin/hdcpService
+lib/libDxHdcp.so
 
 # Media
 -framework/qcmediaplayer.jar
@@ -428,8 +486,11 @@ vendor/lib/libqti-perfd-client.so
 # Postprocessing
 bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
--vendor/lib/libmm-abl.so
+vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
+
+# Powerup reason
+bin/powerup_reason
 
 # Qualcomm framework
 bin/irsc_util
@@ -456,7 +517,6 @@ vendor/lib/libsmemlog.so
 bin/netmgrd
 bin/qmuxd
 bin/radish
-#bin/rild
 bin/rfs_access
 bin/rmt_storage
 etc/permissions/qcnvitems.xml
@@ -475,17 +535,25 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 
+# Sensors
+vendor/lib/libcalmodule_akm.so
+
+# TCT daemon
+bin/tctd
+
 # Thermal
 bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
-vendor/lib/libthermalclient.so
 
 # Time services
 -app/TimeService/TimeService.apk
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
+
+# USB driver
+etc/USBDriver.iso
 
 # Alcatel
 vendor/lib/libTCHGLSurfaceRenderer.so
@@ -511,79 +579,20 @@ vendor/lib/mmi_sysinfo.so
 vendor/lib/mmi_touch.so
 vendor/lib/mmi_touchpanel.so
 vendor/lib/mmi_vibrator.so
+vendor/lib/mmi_wifi.so
 vendor/lib/mmi_volume.so
 
-vendor/lib/libcalmodule_akm.so
-
-bin/test_diag
-bin/tctd
-bin/tc
-bin/tdc
-bin/tfa9897
-bin/tclapp_switch_service
-bin/usbhub
-bin/usbhub_init
-bin/usb_uicc_client
-
-etc/tfa9897/seltech_bottom.cnt
-etc/tfa9897/seltech_stereo.cnt
-etc/tfa9897/seltech_top.cnt
-etc/tfa9897/LC/seltech_bottom.cnt
-etc/tfa9897/LC/seltech_stereo.cnt
-etc/tfa9897/LC/seltech_top.cnt
-etc/tfa9897/AAC/seltech_bottom.cnt
-etc/tfa9897/AAC/seltech_stereo.cnt
-etc/tfa9897/AAC/seltech_top.cnt
-
-etc/firmware/Signedrompatch_v20.bin
-etc/firmware/Signedrompatch_v21.bin
-etc/firmware/Signedrompatch_v24.bin
-etc/firmware/Signedrompatch_v30.bin
 
 lib64/libfota_d_native.so
 lib64/libstlport_shared.so
-
-vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
-vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so
-vendor/lib/qcdrm/playready/lib/drm/libdrmprplugin_customer.so
-vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
-vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 vendor/lib/libNimsWrap.so
-#bin/ssr_setup
-#bin/ssr_diag
-#bin/ims_rtp_daemon
-#bin/imsqmidaemon
-#bin/imsdatadaemon
-bin/powerup_reason
-#bin/restore_efs
-#bin/reporthelper
-#vendor/etc/msm_irqbalance.conf
-#bin/vm_bms
-#bin/diag_mdlog
-#bin/mmi
-#bin/ATFWD-daemon
-#bin/cnss-daemon
-#bin/ftmdaemon
-#bin/ptt_socket_app
-#bin/port-bridge
-#bin/sapd
-#bin/dun-server
-#bin/dpmd
-#bin/cnd
-#bin/subsystem_ramdump
-#bin/qcom-system-daemon
-
-# Add everything missing from CM vendor folder 
-# I hope the device to boot at the end ... 
 vendor/bin/audioflacapp
 vendor/bin/sound_trigger_test
-vendor/firmware/BCM20795A2_001.003.025.0005.0035_Generic_I2C_NCD_Unsigned_configdata.ncd
 vendor/lib/hw/sound_trigger.primary.msm8916.so
 vendor/lib/libacdbmapper.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libbccQTI.so
-vendor/lib/libc2d30-a3xx.so
 vendor/lib/libcneconn.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libcne.so
@@ -596,7 +605,6 @@ vendor/lib/libdpmnsrm.so
 vendor/lib/libextendedremotedisplay.so
 vendor/lib/libFileMux.so
 vendor/lib/libHevcSwDecoder.so
-vendor/lib/libhwdaphal.so
 vendor/lib/libimscamera_jni.so
 vendor/lib/lib-imscamera.so
 vendor/lib/lib-imsdpl.so
@@ -613,53 +621,8 @@ vendor/lib/lib-imsvt.so
 vendor/lib/lib-imsxml.so
 vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel2.so
-vendor/lib/libloc_ext.so
-vendor/lib/libloc_xtra.so
 vendor/lib/libmasc.so
 vendor/lib/libmdsprpc.so
-vendor/lib/libmm-abl.so
-vendor/lib/libmmcamera_gc0339_alto5.so
-vendor/lib/libmmcamera_hi256.so
-vendor/lib/libmmcamera_imx132.so
-vendor/lib/libmmcamera_imx134.so
-vendor/lib/libmmcamera_imx135.so
-vendor/lib/libmmcamera_imx214.so
-vendor/lib/libmmcamera_mt9m114.so
-vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
-vendor/lib/libmmcamera_ov13850.so
-vendor/lib/libmmcamera_ov16825.so
-vendor/lib/libmmcamera_ov2680_5987fhq.so
-vendor/lib/libmmcamera_ov2680.so
-vendor/lib/libmmcamera_ov2720.so
-vendor/lib/libmmcamera_ov5645.so
-vendor/lib/libmmcamera_ov5648_oty5f03.so
-vendor/lib/libmmcamera_ov5648_p5v18g.so
-vendor/lib/libmmcamera_ov5648_q5v22e.so
-vendor/lib/libmmcamera_ov5670_q5v41b.so
-vendor/lib/libmmcamera_ov5670_truly_ff.so
-vendor/lib/libmmcamera_ov7695.so
-vendor/lib/libmmcamera_ov8825.so
-vendor/lib/libmmcamera_ov8858_q8v19w.so
-vendor/lib/libmmcamera_ov8858.so
-vendor/lib/libmmcamera_ov8865_q8v18a.so
-vendor/lib/libmmcamera_ov9724.so
-vendor/lib/libmmcamera_s5k3l1yx.so
-vendor/lib/libmmcamera_S5K4E1_13P1BA.so
-vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
-vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
-vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
-vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
-vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
-vendor/lib/libmmcamera_sonyimx135_eeprom.so
-vendor/lib/libmmcamera_sony_imx214_eeprom.so
-vendor/lib/libmmcamera_sp1628.so
-vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
-vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
-vendor/lib/libmmcamera_sunny_q13v04b_eeprom.so
-vendor/lib/libmmcamera_sunny_q5v22e_eeprom.so
-vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
-vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
-vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmhttpstack.so
@@ -679,8 +642,6 @@ vendor/lib/libmmwfdsrcinterface.so
 vendor/lib/libnative_audio_latency_jni.so
 vendor/lib/libOmxMux.so
 vendor/lib/libP11EncryptorDecryptor.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
 vendor/lib/lib-rcsimssjni.so
 vendor/lib/lib-rcsjni.so
 vendor/lib/lib-rtpcommon.so
@@ -714,35 +675,16 @@ vendor/lib/libwfduibcsrcinterface.so
 vendor/lib/libwfduibcsrc.so
 vendor/lib/libwifiscanner.so
 vendor/lib/libwqe.so
-vendor/lib/libxt_native.so
-vendor/lib/mmi_wifi.so
-vendor/media/LMspeed_508.emd
-vendor/media/PFFprec_600.emd
 
-# The lines below are added at the same time as the previous 
-# comment. The intention is to boot with the stock ramdisk.
 
-bin/hdcpService
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/ice40.bin
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
-etc/firmware/nfc_test.bin
 etc/permissions/com.qualcomm.location.vzw_library.xml
-etc/qca6234-service.sh
 etc/qlog-conf.xml
 etc/region_ver
 etc/sound_trigger_mixer_paths_wcd9306.xml
 etc/sound_trigger_mixer_paths.xml
 etc/sound_trigger_platform_info.xml
-etc/USBDriver.iso
+
 #lib/drm/libcombinedengine.so
 #lib/drm/libseparateengine.so
-lib/libDxHdcp.so
-lib/libtfa9897.so
+
+
