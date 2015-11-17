@@ -72,6 +72,7 @@ on init
     chown root system /sys/class/sensors/kionix-accel/enable
     chown root system /sys/class/sensors/kionix-accel/calibrate
     chown root system /sys/class/sensors/kionix-accel/poll_delay
+    
     chown root system /sys/class/sensors/tsl27723-als/enable
     chown root system /sys/class/sensors/tsl27723-als/calibrate
     chown root system /sys/class/sensors/tsl27723-als/poll_delay
@@ -644,19 +645,6 @@ service tctd /system/bin/tctd
     class core
     socket tctd stream 0666 root root
 #    seclabel u:r:tctd:s0
-
-service power_engine /system/bin/power_engine
-    class late_start
-    user root
-    group root
-    disabled
-#    seclabel u:r:power_engine:s0
-
-on property:persist.sys.power_ctrl=1
-    start power_engine
-
-on property:persist.sys.power_ctrl=0
-    stop power_engine
 
 service powerup_reason /system/bin/powerup_reason
     user root
