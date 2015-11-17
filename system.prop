@@ -19,9 +19,6 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 ro.telephony.default_network=9
 
-debug.sf.hw=1
-debug.egl.hw=1
-persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
@@ -54,7 +51,14 @@ persist.timed.enable=true
 
 #Display
 ro.sf.lcd_density=320
+debug.composition.type=c2d
+debug.sf.gpu_comp_tiling=1
+debug.mdpcomp.idletime=600
+persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196608
+debug.sf.hw=1
+debug.egl.hw=1
+debug.enable.sglscale=1
 ro.qualcomm.cabl=2
 
 telephony.lteOnCdmaDevice=1
@@ -116,6 +120,8 @@ ro.sys.fw.bservice_limit=5
 ro.sys.fw.bservice_age=5000
 
 ro.config.max_starting_bg=8
+
+dalvik.vm.dex2oat-flags=--no-watch-dog
 
 # perf
 ro.core_ctl_min_cpu=2
