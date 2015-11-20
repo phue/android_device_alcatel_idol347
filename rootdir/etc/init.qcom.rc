@@ -41,7 +41,6 @@ on init
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
-    mkdir /storage/emulated/legacy 0500 root root
     mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
     mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
     mkdir /storage/sdcard1 0700 root root
@@ -56,7 +55,7 @@ on init
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
-    symlink /storage/emulated/legacy /storage/emulated/0
+    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
     # Enable power off alarm
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
@@ -545,7 +544,7 @@ service ril-daemon1 /system/bin/rild -c 2
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
 
