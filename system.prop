@@ -16,8 +16,6 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 persist.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-ro.telephony.default_network=9
 
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
@@ -78,7 +76,7 @@ audio.offload.min.duration.secs=30
 persist.audio.fluence.speaker=false
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
-tunnel.audio.encode = false
+tunnel.audio.encode=false
 use.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
 audio.dolby.ds2.enabled=true
