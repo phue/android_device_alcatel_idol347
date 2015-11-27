@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     init.qcom.zram.sh \
     init.recovery.qcom.rc \
     init.tct.gpio_keys.sh \
+    init.tct.variant.sh \
     ueventd.qcom.rc
 
 # Permissions
@@ -239,7 +240,7 @@ PRODUCT_PACKAGES += \
     libcalmodule_akm.so \
     libcalmodule_common \
     sensors.msm8916
-    
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory

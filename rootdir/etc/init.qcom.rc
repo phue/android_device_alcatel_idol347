@@ -113,7 +113,8 @@ on post-fs
     mkdir /tctpersist/crash_report 0775 root system
     mkdir /tctpersist/simlock 0771 system radio
     start powerup_reason
-
+    start set_variant
+    
     write /sys/class/android_usb/android0/f_mass_storage/rom/file /system/etc/USBDriver.iso
 
 # msm specific files that need to be created on /data
@@ -384,6 +385,11 @@ on property:persist.env.fastdorm.enabled=true
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
+    user root
+    oneshot
+
+service set_variant /system/bin/init.tct.variant.sh
+    class core
     user root
     oneshot
 
