@@ -69,8 +69,8 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 BOARD_CAMERA_SENSORS := \
-    s5k5e2_idol347 \
-    s5k3m2_idol347
+    imx214_idol347 \
+    s5k5e2_idol347
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
@@ -118,6 +118,9 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_idol347.c
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+
+# Keymaster
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
