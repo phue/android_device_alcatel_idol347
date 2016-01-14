@@ -76,7 +76,6 @@ vendor/lib/libmmcamera_imx214_idol347.so
 vendor/lib/libmmcamera_ov5670_idol347.so
 vendor/lib/libmmcamera_s5k3m2_idol347.so
 vendor/lib/libmmcamera_s5k3m2_idol347_eeprom.so
-vendor/lib/libmmcamera_s5k3m2_idol347_samsuny.so
 vendor/lib/libmmcamera_s5k5e2_idol347.so
 vendor/lib/libmmcamera_s5k5e2_idol347_eyeverify.so
 vendor/lib/libmmcamera_tintless_algo.so
