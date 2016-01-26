@@ -98,10 +98,6 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
     libantradio
-	
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8916
 
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
