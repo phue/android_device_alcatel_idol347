@@ -556,9 +556,6 @@ vendor/lib/libxml.so
 # Sensors
 vendor/lib/libcalmodule_akm.so
 
-# TCT daemon
-bin/tctd
-
 # Thermal
 bin/thermal-engine
 vendor/lib/libthermalclient.so

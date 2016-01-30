@@ -359,7 +359,7 @@ on boot
 
     # Touchpanel
     chown system system /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
-	chmod 0666 /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
+    chmod 0666 /sys/class/ms-touchscreen-msg20xx/device/gesture_wakeup_mode
 
     # TFA9897
     chown system audio /dev/i2c-4
@@ -640,11 +640,6 @@ on property:sys.gpio_keys.init_ok=0
 on property:sys.gpio_keys.init_ok=1
     stop disable_hall
     start enable_hall
-
-service tctd /system/bin/tctd
-    class core
-    socket tctd stream 0666 root root
-#    seclabel u:r:tctd:s0
 
 service powerup_reason /system/bin/powerup_reason
     user root
