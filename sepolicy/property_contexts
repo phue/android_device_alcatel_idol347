@@ -1,0 +1,8 @@
+qualcomm.bluetooth.              u:object_r:bluetooth_prop:s0
+qualcomm.bt.                     u:object_r:bluetooth_prop:s0
+
+# tfa9897
+audio.spkbox.                    u:object_r:audio_prop:s0
+
+# variant prop
+ro.cm.curef                      u:object_r:variant_prop:s0

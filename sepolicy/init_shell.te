@@ -1,0 +1,2 @@
+# variant prop
+allow init_shell variant_prop:property_service set;

@@ -507,9 +507,6 @@ vendor/lib/libdisp-aba.so
 -vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
 
-# Powerup reason
-bin/powerup_reason
-
 # Qualcomm framework
 bin/irsc_util
 vendor/lib/libdiag.so
