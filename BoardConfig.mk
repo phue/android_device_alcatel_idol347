@@ -169,7 +169,8 @@ BOARD_SEPOLICY_UNION += \
     mediaserver.te \
     property_contexts \
     rmt_storage.te \
-    system_server.te
+    system_server.te \
+    wcnss_service.te
     
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true

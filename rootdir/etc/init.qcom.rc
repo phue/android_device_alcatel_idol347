@@ -100,6 +100,7 @@ on fs
     mount_all fstab.qcom
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
+    restorecon_recursive /tctpersist
     setprop ro.crypto.fuse_sdcard true
 
 on post-fs
