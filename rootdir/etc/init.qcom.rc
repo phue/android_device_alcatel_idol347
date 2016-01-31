@@ -619,23 +619,3 @@ service wcnss-service /system/bin/wcnss_service
     user system
     group system wifi radio
     oneshot
-
-service enable_hall /system/bin/sh /system/etc/init.tct.gpio_keys.sh 1
-    oneshot
-    disabled
-
-service disable_hall /system/bin/sh /system/etc/init.tct.gpio_keys.sh 0
-    oneshot
-    disabled
-
-on property:init.svc.bootanim=stopped
-    stop disable_hall
-    start enable_hall
-
-on property:sys.gpio_keys.init_ok=0
-    stop enable_hall
-    start disable_hall
-
-on property:sys.gpio_keys.init_ok=1
-    stop disable_hall
-    start enable_hall
