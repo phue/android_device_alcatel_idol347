@@ -108,11 +108,8 @@ on post-fs
     chmod 0775 /tctpersist
     chown system system /persist/data
     chmod 0775 /persist/data
-    mkdir /tctpersist/powerup_reason 0775 root system
-    chmod 0775 /tctpersist/powerup_reason
     mkdir /tctpersist/crash_report 0775 root system
     mkdir /tctpersist/simlock 0771 system radio
-    start powerup_reason
     start set_variant
     
     write /sys/class/android_usb/android0/f_mass_storage/rom/file /system/etc/USBDriver.iso
