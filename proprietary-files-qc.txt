@@ -480,10 +480,6 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
-# HDCP
-bin/hdcpService
-lib/libDxHdcp.so
-
 # Media
 -framework/qcmediaplayer.jar
 vendor/lib/libDivxDrm.so
