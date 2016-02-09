@@ -1,2 +1,2 @@
 # variant setting fixme:probably has to be moved for cm-13 due to init_shell being deprecated
-allow init_shell bootselect_device:blk_file { open read getattr};
+allow init_shell bootselect_device:blk_file { open read getattr };

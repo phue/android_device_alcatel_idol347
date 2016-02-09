@@ -1,5 +1,5 @@
 /persist/.bt_nv.bin														u:object_r:bluetooth_data_file:s0
-/tctpersist/data/param/macaddr											u:object_r:wifi_data_file:s0
+/tctpersist/data/param/macaddr											u:object_r:macaddr_data_file:s0
 
 /system/bin/btnvtool													u:object_r:bluetooth_loader_exec:s0
 /system/etc/init\.qcom\.bt\.sh											u:object_r:bluetooth_loader_exec:s0
@@ -14,5 +14,6 @@
 
 /dev/block/bootdevice/by-name/tunning									u:object_r:modem_efs_partition_device:s0
 /dev/block/bootdevice/by-name/traceability								u:object_r:bootselect_device:s0
+/dev/block/bootdevice/by-name/tctpersist								u:object_r:wcnss_device:s0
 
 /sys/devices/virtual/ms-touchscreen-msg20xx/device/gesture_wakeup_mode	u:object_r:sysfs_gesture_wakeup_mode:s0

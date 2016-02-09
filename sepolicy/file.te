@@ -1,2 +1,3 @@
 # CmHardwareService
 type sysfs_gesture_wakeup_mode, fs_type, sysfs_type;
+type macaddr_data_file, file_type;
