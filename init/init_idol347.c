@@ -26,6 +26,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -54,7 +55,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 {
     char platform[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
-    char variant[PROP_VALUE_MAX]; 
+    char variant[92];
+    FILE *dv;
     int rc;
 
     UNUSED(msm_id);
@@ -65,7 +67,9 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || strncmp(platform, ANDROID_TARGET, PROP_VALUE_MAX))
         return;
 
-    property_get("ro.cm.variant", variant);
+    dv = popen("/system/xbin/strings /dev/block/bootdevice/by-name/traceability | /system/xbin/grep '6039' | /system/xbin/cut -c4-8" , "r");
+    fgets(variant, sizeof(variant), dv);
+    pclose(dv);
     
     if (strstr(variant, "6039Y")) {
         /* 6039Y L1AJE0E0BQ00 */

@@ -1,2 +1,2 @@
-# variant prop
-allow init_shell variant_prop:property_service set;
+# variant setting fixme:probably has to be moved for cm-13 due to init_shell being deprecated
+allow init_shell bootselect_device:blk_file { open read getattr};

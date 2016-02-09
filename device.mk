@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qcom.zram.sh \
     init.recovery.qcom.rc \
-    init.tct.variant.sh \
     ueventd.qcom.rc
 
 # Permissions

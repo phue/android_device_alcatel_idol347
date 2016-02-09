@@ -1,5 +1,2 @@
 # CmHardwareService
 type sysfs_gesture_wakeup_mode, fs_type, sysfs_type;
-
-# variant prop
-type variant_prop, property_type;
