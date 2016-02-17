@@ -50,12 +50,6 @@ char const*const BLINK_LED_FILE
 char const*const BRIGHT_LED_FILE
         = "/sys/class/leds/led_G/brightness";
 
-char const*const NOW_BATTERY_LEVEL
-        = "/sys/class/power_supply/battery/capacity";
-
-char const*const BATTERY_STATUS
-        = "/sys/class/power_supply/battery/status";
-
 /**
  * device methods
  */
