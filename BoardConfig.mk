@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+USE_HOST_LEX=yes
 DEVICE_PATH := device/alcatel/idol347
 
 
