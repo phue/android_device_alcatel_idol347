@@ -95,6 +95,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6039S/idol347:5.0.2/LRX22G/v1ACV-0:user/release-keys");
         property_set("ro.build.description", "idol347-user 5.0.2 LRX22G v1ACV-0 release-keys");
         property_set("ro.product.model", "6039S");
+    } else if (strstr(variant, "6039H")) {
+       /* 6039H */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
+        property_set("ro.build.fingerprint", "TCL/6039H/idol347:5.0.2/LRX22G/v1ADE-0:user/release-keys");
+        property_set("ro.build.description", "idol347-user 5.0.2 LRX22G v1ADE-0 release-keys");
+        property_set("ro.product.model", "6039H");
     } else if (strstr(variant, "6039K")) {
        /* 6039K L1AJE0E0BQ00 */
         common_properties();
@@ -112,7 +120,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "idol347-user 5.0.2 LRX22G v1ACP-0 release-keys");
         property_set("ro.product.model", "6039J");
     } else {
-        /* 6039X */
+       /* 6039X */
         common_properties();
         dualsim_properties("single");
         gsm_properties("9");
